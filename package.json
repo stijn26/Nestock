@@ -1,0 +1,19 @@
+{
+  "name": "nestock",
+  "version": "0.0.0-SNAPSHOT",
+  "description": "Event Sourcing proof-of-concept in Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stijn26/Nestock.git"
+  },
+  "author": "Stijn Aerts and Jeroen Bellen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stijn26/Nestock/issues"
+  },
+  "homepage": "https://github.com/stijn26/Nestock#readme"
+}
