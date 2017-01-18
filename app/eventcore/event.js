@@ -1,37 +1,37 @@
-"use strict"; 
+"use strict";
 
 const p = new WeakMap();
 
 class Event {
-	
-	constructor(aggregate, when, name, data) {
-		p.set(this, {
-			aggregate: aggregate,
-			when: when,
-			name: name,
-			data: data
-		});
-	}
 
-	get aggregate() {
-		return p.get(this).aggregate;
-	}
+    constructor(aggregate, when, name, data) {
+        p.set(this, {
+            aggregate: aggregate,
+            when: when,
+            name: name,
+            data: data
+        });
+    }
 
-	get when() {
-		return p.get(this).when;
-	}
+    get aggregate() {
+        return p.get(this).aggregate;
+    }
 
-	get name() {
-		return p.get(this).name;
-	}
+    get when() {
+        return p.get(this).when;
+    }
 
-	get data() {
-		return p.get(this).data;
-	}
+    get name() {
+        return p.get(this).name;
+    }
 
-	toString() {
-		return `Event aggregate=[${this.aggregate}] when=[${this.when}] name=[${this.name}]`
-	}
+    get data() {
+        return p.get(this).data;
+    }
+
+    toString() {
+        return `Event aggregate=[${this.aggregate}] when=[${this.when}] name=[${this.name}]`
+    }
 }
 
 module.exports = Event;
