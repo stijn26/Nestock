@@ -10,7 +10,7 @@ class TestEntity extends SourcedEntity {
     }
 
     behavior(b) {
-        b.on('writesLetter', (data) => {
+        b.on('letterWritten', (data) => {
             this.word += data.letter;
         });
     }
@@ -21,10 +21,10 @@ describe("SourcedEntity test", () => {
     testEntity.init();
 
     testEntity.source([
-        { name: "writesLetter", data: { letter: "B" } },
-        { name: "writesLetter", data: { letter: "E" } },
-        { name: "writesLetter", data: { letter: "E" } },
-        { name: "writesLetter", data: { letter: "R" } }
+        { name: "letterWritten", data: { letter: "B" } },
+        { name: "letterWritten", data: { letter: "E" } },
+        { name: "letterWritten", data: { letter: "E" } },
+        { name: "letterWritten", data: { letter: "R" } }
     ]);
 
     it("creates instance", () => expect(testEntity).to.exist);
